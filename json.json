@@ -1,0 +1,126 @@
+{
+    "cook": [
+      {
+        "employee_id": 12345,
+        "first_name": "John",
+        "last_name": "Doe",
+        "identifyer color":"green",
+        "schedule": {
+          "monday": "7 am - 4 pm",
+          "tuesday": "7 am - 4 pm",
+          "wednesday": "7 am - 4 pm",
+          "thursday": "7 am - 4 pm",
+          "friday": "7 am - 4 pm"
+        }
+      },
+      {
+        "employee_id": 12346,
+        "first_name": "Liz",
+        "last_name": "Dayane",
+        "identifyer color":"lightgreen",
+        "schedule": {
+          "monday": "7 am - 4 pm",
+          "tuesday": "7 am - 4 pm",
+          "Wednesday": "7 am - 4 pm",
+          "Thursday": "7 am - 4 pm",
+          "Friday": "7 am - 4 pm"
+        }
+      },
+      {
+        "employee_id": 12545,
+        "first_name": "Pedro",
+        "last_name": "Barrero",
+        "identifyer color": "yellow",
+        "schedule": {
+          "Monday": "7 am - 4 pm",
+          "tuesday": "7 am - 4 pm",
+          "Wednesday": "7 am - 4 pm",
+          "thursday": "7 am - 4 pm",
+          "Friday": "7 am - 4 pm"
+        }
+      }
+    ],
+    "server": [
+      {
+        "employee_id": 11075,
+        "first_name": "Leyla",
+        "last_name": "Ruiz",
+        "identifyer color": "lightblue",
+        "schedule": {
+          "monday": "7 am - 4 pm",
+          "tuesday": "7 am - 4 pm",
+          "wednesday": "7 am - 4 pm",
+          "thursday": "7 am - 4 pm",
+          "friday": "7 am - 4 pm"
+        }
+      },
+      {
+        "employee_id": 11076,
+        "first_name": "Rita",
+        "last_name": "Lazo",
+        "identifyer color":"Gray",
+        "schedule": {
+          "monday": "7 am - 4 pm",
+          "tuesday": "7 am - 4 pm",
+          "wednesday": "7 am - 4 pm",
+          "thursday": "7 am - 4 pm",
+          "friday": "7 am - 4 pm"
+        }
+      },
+      {
+        "employee_id": 11077,
+        "first_name": "Lion",
+        "last_name": "Liz",
+        "identifyer color": "lightbrown",
+        "schedule": {
+          "monday": "7 am - 4 pm",
+          "tuesday": "7 am - 4 pm",
+          "wednesday": "7 am - 4 pm",
+          "thursday": "7 am - 4 pm",
+          "friday": "7 am - 4 pm"
+        }
+      }
+    ],
+    "cashier": [
+      {
+        "employee_id": 11345,
+        "first_name": "Laura",
+        "last_name": "Parra",
+        "identifyer color": "red",
+        "schedule": {
+          "monday": "7 am - 4 pm",
+          "tuesday": "7 am - 4 pm",
+          "wednesday": "7 am - 4 pm",
+          "thursday": "7 am - 4 pm",
+          "friday": "7 am - 4 pm"
+        }
+      },
+      {
+        "employee_id": 11445,
+        "first_name": "Lourdes",
+        "last_name": "Pri Pra",
+        "identifyer color": "purple",
+        "schedule": {
+          "monday": "7 am - 4 pm",
+          "tuesday": "7 am - 4 pm",
+          "wednesday": "7 am - 4 pm",
+          "thursday": "7 am - 4 pm",
+          "friday": "7 am - 4 pm"
+        }
+      },
+      {
+        "employee_id": 11045,
+        "first_name": "Benito",
+        "last_name": "Camelas",
+        "identifyer color":"orange",
+        "schedule": {
+          "monday": "7 am - 4 pm",
+          "muesday": "7 am - 4 pm",
+          "Wednesday": "7 am - 4 pm",
+          "thursday": "7 am - 4 pm",
+          "friday": "7 am - 4 pm"
+        }
+      }
+    ]
+  }
+  
