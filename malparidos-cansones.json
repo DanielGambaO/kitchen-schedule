@@ -1,0 +1,42 @@
+{
+    "Cook employee": {
+      "employee_id": 12345,
+      "first_name": "John",
+      "last_name": "Doe",
+      "position": "Cook"
+    }
+    
+    {
+        "employee_id": 12346,
+        "first_name": "liz",
+        "last_name": "Dayane",
+        "position": "Cook"
+    }
+    
+    { 
+        "employee_id": 12545,
+        "first_name": "Pedro",
+        "last_name": "Barrero",
+        "position": "Cook"
+    }
+
+    {
+        "employee_id": 11345,
+        "first_name": "Laura",
+        "last_name": "Parra",
+        "position": "Cashier"
+    }
+    {
+        "employee_id": 11445,
+        "first_name": "Lourdes",
+        "last_name": "Pri Pra",
+        "position": "Cashier"
+    }
+    {
+        "employee_id": 11045,
+        "first_name": "Benito",
+        "last_name": "Camelas",
+        "position": "Cashier"
+    }
+}
+  
