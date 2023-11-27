@@ -3,19 +3,23 @@
 nav {
   display: flex;
   justify-content: flex-start;
-  background-color: #333; /* Change the background color as needed */
+  background-color: #333;
+  /* Change the background color as needed */
   padding: 10px;
 }
 
-a, label {
-  color: white; /* Change the text color as needed */
+a,
+label {
+  color: white;
+  /* Change the text color as needed */
   text-decoration: none;
   padding: 5px 20px;
   display: inline-block;
 }
 
 a:hover {
-  background-color: #555; /* Change the background color on hover as needed */
+  background-color: #555;
+  /* Change the background color on hover as needed */
 }
 
 .dropdown {
@@ -26,7 +30,8 @@ a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #333; /* Change the background color as needed */
+  background-color: #333;
+  /* Change the background color as needed */
   min-width: 160px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -34,4 +39,15 @@ a:hover {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.color-square {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.employeeTableBody {
+  text-align: center;
 }

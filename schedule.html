@@ -5,15 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule blueprint</title>
-    <style>
-        .color-square {
-            width: 20px;
-            height: 20px;
-            display: inline-block;
-            margin-right: 5px;
-        }
-    </style>
-
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Include your scripts.js file -->
+    <script src="scripts.js"></script>
 </head>
 
 <body>
@@ -107,33 +103,16 @@
     </table>
 
     <table>
+        <caption id="caption"></caption>
         <thead>
             <tr>
                 <th>Employee's name</th>
                 <th>Unique color</th>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>Employee 1 name</td>
-                <td>
-                    <div class="color-square" style="background: lightblue;"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>Employee 2 name</td>
-                <td>
-                    <div class="color-square" style="background-color: red;"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>Employee 3 name</td>
-                <td>
-                    <div class="color-square" style="background: lightgreen;"></div>
-                </td>
-            </tr>
-        </tbody>
+        <tbody class="employeeTableBody" id="employeeTableBody"></tbody>
     </table>
+
     <script>
         // Accessing parameters from the URL
         const urlParams = new URLSearchParams(window.location.search);
@@ -143,6 +122,15 @@
         // Set text content of the caption element
         const paramCaption = document.getElementById('caption');
         caption.textContent = `Parameters: ${param1}, ${param2}`;
+
+        $(document).ready(function () {
+            // Use the readJsonData function
+            readJsonData(function (data) {
+                // Use the fillTableWithData function
+                const tableId = $('#employeeTableBody');
+                fillTableWithNamesAndColors(data, tableId);
+            });
+        });
     </script>
 </body>
 
