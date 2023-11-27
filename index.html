@@ -5,67 +5,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kitchen Schedule</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav {
-      background-color: #333;
-      overflow: hidden;
-    }
-
-    nav a {
-      float: left;
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 
 <body>
   
   <nav>
-      <a href="#home">Home</a>
+      <a href="index.html">Home</a>
       <div class="dropdown">
         <label>Cooking</label>
         <div class="dropdown-content">
-          <a href="#cooking_schedule">Cooking schedule</a><br />
+          <a href="schedule.html?param1=test2">Cooking schedule</a><br />
           <a href="#cooking_list">Employee list</a>
         </div>
       </div>
       <div class="dropdown">
         <label>Serving</label>
         <div class="dropdown-content">
-          <a href="#serving_schedule">Serving schedule</a><br />
+          <a href="schedule.html?param1=test2">Serving schedule</a><br />
           <a href="#serving_list">Employee list</a>
         </div>
       </div>
       <div class="dropdown">
         <label>Cashier</label>
         <div class="dropdown-content">
-          <a href="#cashier_schedule">Cashier schedule</a><br />
+          <a href="schedule.html?param1=test2">Cashier schedule</a><br />
           <a href="#cashier_list">Employee list</a>
         </div>
       </div>
     </nav>
     <br /><br />
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="schedule.html?param1=test2&param2=tesst2">Cooking</a>
-    <a href="schedule.html?param1=test2&param2=tesst2">Servers</a>
-    <a href="schedule.html?param1=test2&param2=tesst2">Cashiers</a>
-  </nav>
 
   <h3>Welcome</h3>
   <p>
