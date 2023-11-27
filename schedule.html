@@ -1,11 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule blueprint</title>
+
 </head>
+
 <body>
 
+    <table>
+        <caption id="caption"></caption>
+        <thead>
+            <tr>
+                <th>TIME RANGE</th>
+                <th>MONDAY</th>
+                <th>TUESDAY</th>
+                <th>WEDNESDAY</th>
+                <th>THURSDAY</th>
+                <th>FRIDAY</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>7:00 am - 8:00 am</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>8:00 am - 9:00 am</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>9:00 am - 10:00 am</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>10:00 am - 11:00 am</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>11:00 am - 12:00 m</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>12:00 m - 1:00 pm</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>1:00 pm - 2:00 pm</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>2:00 pm - 3:00 pm</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>3:00 m - 4:00 pm</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Employee's name</th>
+                <th>Unique color</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Employee 1 name</td>
+                <td>Employee 2 name</td>
+                <td>Employee 3 name</td>
+            </tr>
+            <tr>
+                <td>Employee 1 color</td>
+                <td>Employee 2 color</td>
+                <td>Employee 3 color</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // Accessing parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const param1 = urlParams.get('param1');
+        const param2 = urlParams.get('param2');
+
+        // Set text content of the caption element
+        const paramCaption = document.getElementById('caption');
+        caption.textContent = `Parameters: ${param1}, ${param2}`;
+    </script>
 </body>
+
 </html>
