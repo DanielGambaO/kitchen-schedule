@@ -1,0 +1,37 @@
+/* Add this to your styles.css file */
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #333; /* Change the background color as needed */
+  padding: 10px;
+}
+
+a, label {
+  color: white; /* Change the text color as needed */
+  text-decoration: none;
+  padding: 5px 20px;
+  display: inline-block;
+}
+
+a:hover {
+  background-color: #555; /* Change the background color on hover as needed */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333; /* Change the background color as needed */
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
