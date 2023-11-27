@@ -159,12 +159,12 @@
         </tbody>
     </table>
     <script>
-        // Accessing parameters from the URL
+        
         const urlParams = new URLSearchParams(window.location.search);
         const param1 = urlParams.get('param1');
         const param2 = urlParams.get('param2');
 
-        // Set text content of the caption element
+       
         const paramCaption = document.getElementById('caption');
         caption.textContent = `Parameters: ${param1}, ${param2}`;
     </script>
