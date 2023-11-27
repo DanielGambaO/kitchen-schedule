@@ -16,28 +16,61 @@
         overflow: hidden;
       }
 
-      nav a {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+      label, a {
+        border-width: 0px;
+        background-color: #333;
+        color: #ffffff;
       }
 
-      nav a:hover {
-        background-color: #ddd;
-        color: black;
+      .dropdown {
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        width: 100%;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        background-color: lightgray;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        color: #ffffff;
+        background-color: #00a4bd;
       }
     </style>
   </head>
-  <body>
+  <body id="home">
     <nav>
-      <a href="#">Home</a>
-      <a href="#">Cooking</a>
-      <a href="#">Servers</a>
-      <a href="#">Cashiers</a>
+      <a href="#home">Home</a>
+      <div class="dropdown">
+        <label>Cooking</label>
+        <div class="dropdown-content">
+          <a href="#cooking_schedule">Cooking schedule</a><br />
+          <a href="#cooking_list">Employee list</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <label>Serving</label>
+        <div class="dropdown-content">
+          <a href="#serving_schedule">Serving schedule</a><br />
+          <a href="#serving_list">Employee list</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <label>Cashier</label>
+        <div class="dropdown-content">
+          <a href="#cashier_schedule">Cashier schedule</a><br />
+          <a href="#cashier_list">Employee list</a>
+        </div>
+      </div>
     </nav>
+    <br /><br />
 
     <h3>Welcome</h3>
     <p>
@@ -49,6 +82,5 @@
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum.
     </p>
-
   </body>
 </html>
