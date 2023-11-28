@@ -32,18 +32,20 @@ function getJsonData() {
     return jsonData;
 }
 
-function fillTableWithNamesAndColors(data, tableId) {
-    // Loop through the data and fill the table
+function fillTableWithNamesAndColors(data, tableId, filterPosition) {
+    tableId.empty();
+
     data.forEach((employee, index) => {
-        const row = $('<tr>');
+        if (!filterPosition || (employee['position'] && employee['position'].toLowerCase() === filterPosition.toLowerCase())) {
+            const row = $('<tr>');
 
-        const nameCell = $('<td>').text(`${employee["first_name"]} ${employee["last_name"]}`);
-        const colorCell = $('<td>');
-        const colorSquare = $('<div>').addClass('color-square').css('background-color', employee['identifier_color']);
+            const nameCell = $('<td>').text(`${employee["first_name"]} ${employee["last_name"]}`);
+            const colorCell = $('<td>');
+            const colorSquare = $('<div>').addClass('color-square').css('background-color', employee['identifier_color']);
 
-        colorCell.append(colorSquare);
-        row.append(nameCell, colorCell);
-        tableId.append(row);
-
+            colorCell.append(colorSquare);
+            row.append(nameCell, colorCell);
+            tableId.append(row);
+        }
     });
 }
