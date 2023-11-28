@@ -10,14 +10,10 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <!-- Include your scripts.js file -->
     <script src="scripts.js"></script>
-
-    
-
 </head>
-
 <body>
-    <div id="navbar-placeholder"></div>
     <table>
+        <div id="navbar-placeholder"></div>
         <caption id="caption"></caption>
         <thead>
             <tr>
@@ -117,25 +113,24 @@
     </table>
 
     <script>
-        
+        const urlParams = new URLSearchParams(window.location.search);
+        const param1 = urlParams.get('param1');
+        const param2 = urlParams.get('param2');
+
+       
+        const paramCaption = document.getElementById('caption');
+        caption.textContent = `Parameters: ${param1}, ${param2}`;
+
         $(document).ready(function () {
-            
-            $('#navbar-placeholder').load('navbar.html');
-
-            
-            const urlParams = new URLSearchParams(window.location.search);
-            const param1 = urlParams.get('param1');
-            const param2 = urlParams.get('param2');
-
-            const paramCaption = $('#caption');
-            paramCaption.text(`Parameters: ${param1}, ${param2}`);
-
             // Use the readJsonData function
             readJsonData(function (data) {
                 // Use the fillTableWithData function
                 const tableId = $('#employeeTableBody');
                 fillTableWithNamesAndColors(data, tableId);
             });
+        });
+        $(document).ready(function () {
+            $('#navbar-placeholder').load('navbar.html');
         });
     </script>
     
