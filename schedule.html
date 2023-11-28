@@ -11,10 +11,9 @@
     <!-- Include your scripts.js file -->
     <script src="scripts.js"></script>
 </head>
-
 <body>
-
     <table>
+        <div id="navbar-placeholder"></div>
         <caption id="caption"></caption>
         <thead>
             <tr>
@@ -114,12 +113,11 @@
     </table>
 
     <script>
-        // Accessing parameters from the URL
         const urlParams = new URLSearchParams(window.location.search);
         const param1 = urlParams.get('param1');
         const param2 = urlParams.get('param2');
 
-        // Set text content of the caption element
+       
         const paramCaption = document.getElementById('caption');
         caption.textContent = `Parameters: ${param1}, ${param2}`;
 
@@ -131,7 +129,11 @@
                 fillTableWithNamesAndColors(data, tableId);
             });
         });
+        $(document).ready(function () {
+            $('#navbar-placeholder').load('navbar.html');
+        });
     </script>
+    
 </body>
 
 </html>
