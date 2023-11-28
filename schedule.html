@@ -11,7 +11,9 @@
     <!-- Include your scripts.js file -->
     <script src="scripts.js"></script>
 </head>
+
 <body>
+
     <table>
         <div id="navbar-placeholder"></div>
         <caption id="caption"></caption>
@@ -28,75 +30,75 @@
         <tbody>
             <tr>
                 <td>7:00 am - 8:00 am</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td id="mo7-8">-</td>
+                <td id="tu7-8">-</td>
+                <td id="we7-8">-</td>
+                <td id="th7-8">-</td>
+                <td id="fr7-8">-</td>
             </tr>
             <tr>
                 <td>8:00 am - 9:00 am</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td id="mo8-9">-</td>
+                <td id="tu8-9">-</td>
+                <td id="we8-9">-</td>
+                <td id="th8-9">-</td>
+                <td id="fr8-9">-</td>
             </tr>
             <tr>
                 <td>9:00 am - 10:00 am</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td id="mo9-10">-</td>
+                <td id="tu9-10">-</td>
+                <td id="we9-10">-</td>
+                <td id="th9-10">-</td>
+                <td id="fr9-10">-</td>
             </tr>
             <tr>
                 <td>10:00 am - 11:00 am</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td id="mo10-11">-</td>
+                <td id="tu10-11">-</td>
+                <td id="we10-11">-</td>
+                <td id="th10-11">-</td>
+                <td id="fr10-11">-</td>
             </tr>
             <tr>
                 <td>11:00 am - 12:00 m</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td id="mo11-12">-</td>
+                <td id="tu11-12">-</td>
+                <td id="we11-12">-</td>
+                <td id="th11-12">-</td>
+                <td id="fr11-12">-</td>
             </tr>
             <tr>
                 <td>12:00 m - 1:00 pm</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td id="mo12-13">-</td>
+                <td id="tu12-13">-</td>
+                <td id="we12-13">-</td>
+                <td id="th12-13">-</td>
+                <td id="fr12-13">-</td>
             </tr>
             <tr>
                 <td>1:00 pm - 2:00 pm</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td id="mo13-14">-</td>
+                <td id="tu13-14">-</td>
+                <td id="we13-14">-</td>
+                <td id="th13-14">-</td>
+                <td id="fr13-14">-</td>
             </tr>
             <tr>
                 <td>2:00 pm - 3:00 pm</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td id="mo14-15">-</td>
+                <td id="tu14-15">-</td>
+                <td id="we14-15">-</td>
+                <td id="th14-15">-</td>
+                <td id="fr14-15">-</td>
             </tr>
             <tr>
                 <td>3:00 m - 4:00 pm</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
+                <td id="mo15-16">-</td>
+                <td id="tu15-16">-</td>
+                <td id="we15-16">-</td>
+                <td id="th15-16">-</td>
+                <td id="fr15-16">-</td>
             </tr>
         </tbody>
     </table>
@@ -113,11 +115,12 @@
     </table>
 
     <script>
+        // Accessing parameters from the URL
         const urlParams = new URLSearchParams(window.location.search);
         const param1 = urlParams.get('param1');
         const param2 = urlParams.get('param2');
 
-       
+        // Set text content of the caption element
         const paramCaption = document.getElementById('caption');
         caption.textContent = `Parameters: ${param1}, ${param2}`;
 
@@ -126,14 +129,15 @@
             readJsonData(function (data) {
                 // Use the fillTableWithData function
                 const tableId = $('#employeeTableBody');
-                fillTableWithNamesAndColors(data, tableId);
+                // TODO CHANGE PARAMETER FOR URL PARAMETER
+                fillTableWithNamesAndColors(data, tableId, "server");
+                fillFullSchedule(data, "server");
             });
         });
         $(document).ready(function () {
             $('#navbar-placeholder').load('navbar.html');
         });
     </script>
-    
 </body>
 
 </html>

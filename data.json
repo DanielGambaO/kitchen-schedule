@@ -6,11 +6,31 @@
     "identifier_color": "green",
     "section": "cook",
     "schedule": {
-      "monday": "7 am - 4 pm",
-      "tuesday": "7 am - 4 pm",
-      "wednesday": "7 am - 4 pm",
-      "thursday": "7 am - 4 pm",
-      "friday": "7 am - 4 pm"
+      "monday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ],
+      "tuesday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ],
+      "wednesday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ],
+      "thursday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ],
+      "friday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ]
     }
   },
   {
@@ -20,11 +40,31 @@
     "identifier_color": "lightgreen",
     "section": "cook",
     "schedule": {
-      "monday": "7 am - 4 pm",
-      "tuesday": "7 am - 4 pm",
-      "Wednesday": "7 am - 4 pm",
-      "Thursday": "7 am - 4 pm",
-      "Friday": "7 am - 4 pm"
+      "monday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ],
+      "tuesday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ],
+      "wednesday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ],
+      "thursday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ],
+      "friday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ]
     }
   },
   {
@@ -34,11 +74,31 @@
     "identifier_color": "yellow",
     "section": "cook",
     "schedule": {
-      "Monday": "7 am - 4 pm",
-      "tuesday": "7 am - 4 pm",
-      "Wednesday": "7 am - 4 pm",
-      "thursday": "7 am - 4 pm",
-      "Friday": "7 am - 4 pm"
+      "monday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ],
+      "tuesday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ],
+      "wednesday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ],
+      "thursday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ],
+      "friday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ]
     }
   },
   {
@@ -48,11 +108,31 @@
     "identifier_color": "lightblue",
     "section": "server",
     "schedule": {
-      "monday": "7 am - 4 pm",
-      "tuesday": "7 am - 4 pm",
-      "wednesday": "7 am - 4 pm",
-      "thursday": "7 am - 4 pm",
-      "friday": "7 am - 4 pm"
+      "monday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ],
+      "tuesday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ],
+      "wednesday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ],
+      "thursday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ],
+      "friday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ]
     }
   },
   {
@@ -62,11 +142,31 @@
     "identifier_color": "gray",
     "section": "server",
     "schedule": {
-      "monday": "7 am - 4 pm",
-      "tuesday": "7 am - 4 pm",
-      "wednesday": "7 am - 4 pm",
-      "thursday": "7 am - 4 pm",
-      "friday": "7 am - 4 pm"
+      "monday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ],
+      "tuesday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ],
+      "wednesday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ],
+      "thursday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ],
+      "friday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ]
     }
   },
   {
@@ -76,11 +176,31 @@
     "identifier_color": "pink",
     "section": "server",
     "schedule": {
-      "monday": "7 am - 4 pm",
-      "tuesday": "7 am - 4 pm",
-      "wednesday": "7 am - 4 pm",
-      "thursday": "7 am - 4 pm",
-      "friday": "7 am - 4 pm"
+      "monday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ],
+      "tuesday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ],
+      "wednesday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ],
+      "thursday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ],
+      "friday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ]
     }
   },
   {
@@ -90,11 +210,31 @@
     "identifier_color": "red",
     "section": "cashier",
     "schedule": {
-      "monday": "7 am - 4 pm",
-      "tuesday": "7 am - 4 pm",
-      "wednesday": "7 am - 4 pm",
-      "thursday": "7 am - 4 pm",
-      "friday": "7 am - 4 pm"
+      "monday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ],
+      "tuesday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ],
+      "wednesday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ],
+      "thursday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ],
+      "friday": [
+        "7-8",
+        "8-9",
+        "9-10"
+      ]
     }
   },
   {
@@ -104,11 +244,31 @@
     "identifier_color": "purple",
     "section": "cashier",
     "schedule": {
-      "monday": "7 am - 4 pm",
-      "tuesday": "7 am - 4 pm",
-      "wednesday": "7 am - 4 pm",
-      "thursday": "7 am - 4 pm",
-      "friday": "7 am - 4 pm"
+      "monday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ],
+      "tuesday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ],
+      "wednesday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ],
+      "thursday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ],
+      "friday": [
+        "10-11",
+        "11-12",
+        "12-13"
+      ]
     }
   },
   {
@@ -118,11 +278,31 @@
     "identifier_color": "orange",
     "section": "cashier",
     "schedule": {
-      "monday": "7 am - 4 pm",
-      "muesday": "7 am - 4 pm",
-      "Wednesday": "7 am - 4 pm",
-      "thursday": "7 am - 4 pm",
-      "friday": "7 am - 4 pm"
+      "monday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ],
+      "tuesday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ],
+      "wednesday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ],
+      "thursday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ],
+      "friday": [
+        "13-14",
+        "14-15",
+        "15-16"
+      ]
     }
   }
 ]
