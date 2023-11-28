@@ -1,53 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kitchen Schedule</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kitchen Schedule</title>
-  <link rel="stylesheet" href="styles.css" type="text/css">
-</head>
-
-<body>
-  
-  <nav>
+  <body>
+    <div class="navbar">
       <a href="index.html">Home</a>
+
       <div class="dropdown">
-        <label>Cooking</label>
-        <div class="dropdown-content">
-          <a href="schedule.html?param1=test2">Cooking schedule</a><br />
-          <a href="#cooking_list">Employee list</a>
+        <div class="dropbtn">Cooking</div>
+        <!--  Main Dropdown -->
+        <div class="dropdown-one">
+          <a id="link" class="dItem" href="schedule.html?param1=test2"
+            >Cooking schedule</a
+          >
+          <div id="link1" class="dItem" href="#">
+            Employee list
+            <!--  Inside Dropdown -->
+            <div class="dropdown-two">
+              <div class="dItem" id="file" href="#">emp1</div>
+              <div class="dItem" id="file" href="#">emp2</div>
+              <div class="dItem" id="file" href="#">emp3</div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="dropdown">
-        <label>Serving</label>
-        <div class="dropdown-content">
-          <a href="schedule.html?param1=test2">Serving schedule</a><br />
-          <a href="#serving_list">Employee list</a>
+        <div class="dropbtn">Serving</div>
+        <!--  Main Dropdown -->
+        <div class="dropdown-one">
+          <a class="dItem" href="schedule.html?param1=test2"
+            >Serving schedule</a
+          >
+          <div id="link1" class="dItem" href="#">
+            Employee list
+            <!--  Inside Dropdown -->
+            <div class="dropdown-two">
+              <div class="dItem" id="file" href="#">emp1</div>
+              <div class="dItem" id="file" href="#">emp2</div>
+              <div class="dItem" id="file" href="#">emp3</div>
+            </div>
+          </div>
         </div>
       </div>
+
       <div class="dropdown">
-        <label>Cashier</label>
-        <div class="dropdown-content">
-          <a href="schedule.html?param1=test2">Cashier schedule</a><br />
-          <a href="#cashier_list">Employee list</a>
+        <div class="dropbtn">Cashier</div>
+        <!--  Main Dropdown -->
+        <div class="dropdown-one">
+          <a class="dItem" href="schedule.html?param1=test2"
+            >Cashier schedule</a
+          >
+          <div id="link1" class="dItem" href="#">
+            Employee list
+            <!--  Inside Dropdown -->
+            <div class="dropdown-two">
+              <div class="dItem" id="file" href="#">emp1</div>
+              <div class="dItem" id="file" href="#">emp2</div>
+              <div class="dItem" id="file" href="#">emp3</div>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
     <br /><br />
 
-  <h3>Welcome</h3>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-    est laborum.
-  </p>
-
-</body>
-
+    <h3>Welcome</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+  </body>
 </html>
-

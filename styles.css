@@ -1,37 +1,69 @@
-/* Add this to your styles.css file */
-
-nav {
-  display: flex;
-  justify-content: flex-start;
-  background-color: #333; /* Change the background color as needed */
-  padding: 10px;
+.navbar {
+  position: sticky;
+  height: 46px;
+  background-color: #1b1b1b;
 }
 
-a, label {
-  color: white; /* Change the text color as needed */
-  text-decoration: none;
-  padding: 5px 20px;
-  display: inline-block;
-}
-
-a:hover {
-  background-color: #555; /* Change the background color on hover as needed */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+    float: left;
+    position: relative;
 }
 
-.dropdown-content {
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+/*     background-color: inherit; */
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-one {
+  cursor: pointer;
   display: none;
   position: absolute;
-  background-color: #333; /* Change the background color as needed */
+  background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-two {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  left: 160px;
+  top: 25px;
+  min-width: 160px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-one, #link1:hover > .dropdown-two {
   display: block;
+}
+
+.dropdown-one .dItem {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+
+.navbar a:hover, .dropbtn:hover{
+    background-color: red;
+}
+
+.dropdown-one .dItem:hover, .dropdown-two a:hover  {
+    background-color: #ddd;
 }
