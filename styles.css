@@ -50,7 +50,7 @@
 }
 
 .dropdown:hover .dropdown-one,
-#link1:hover > .dropdown-two {
+#link1:hover>.dropdown-two {
   display: block;
 }
 
@@ -69,4 +69,38 @@
 .dropdown-one .dItem:hover,
 .dropdown-two a:hover {
   background-color: #ddd;
+}
+
+.color-square {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  /* Cambiado a inline-block */
+  margin-right: 5px;
+
+}
+
+/* Employee table body styles */
+.employeeTableBody {
+  text-align: center;
+}
+
+/* General table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+caption {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
 }

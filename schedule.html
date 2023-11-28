@@ -129,8 +129,9 @@
             readJsonData(function (data) {
                 // Use the fillTableWithData function
                 const tableId = $('#employeeTableBody');
-                fillTableWithNamesAndColors(data, tableId);
-                fillFullSchedule(data);
+                // TODO CHANGE PARAMETER FOR URL PARAMETER
+                fillTableWithNamesAndColors(data, tableId, "server");
+                fillFullSchedule(data, "server");
             });
         });
         $(document).ready(function () {

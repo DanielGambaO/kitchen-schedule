@@ -36,7 +36,8 @@ function fillTableWithNamesAndColors(data, tableId, filterPosition) {
     tableId.empty();
 
     data.forEach((employee, index) => {
-        if (!filterPosition || (employee['position'] && employee['position'].toLowerCase() === filterPosition.toLowerCase())) {
+        if (!filterPosition || (employee['section'] && employee['section'].toLowerCase() === filterPosition.toLowerCase())) {
+
             const row = $('<tr>');
 
             const nameCell = $('<td>').text(`${employee["first_name"]} ${employee["last_name"]}`);
@@ -50,7 +51,8 @@ function fillTableWithNamesAndColors(data, tableId, filterPosition) {
     });
 }
 
-function fillFullSchedule(data) {
+// Updated fillFullSchedule function
+function fillFullSchedule(data, filterSection) {
     const daysOfWeek = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
 
     // Iterate over each day of the week
@@ -61,17 +63,22 @@ function fillFullSchedule(data) {
             const cellId = `${day.substring(0, 2)}${i}-${i + 1}`;
 
             // Find the employees scheduled for this time and day
-            const employees = data.filter(emp => emp.schedule[day]?.includes(timeRange));
+            const employees = data.filter(emp => emp.schedule[day]?.includes(timeRange) && emp.section === filterSection);
 
             // Update the table cell with the employees' names and colors
             const cell = $(`#${cellId}`);
             if (employees.length > 0) {
-                // Concatenate names and colors if there are multiple employees
-                const names = employees.map(emp => `${emp.first_name} ${emp.last_name}`).join('<br>');
-                const colors = employees.map(emp => emp.identifier_color).join(';');
-                console.log(colors)
-                cell.html(names);
-                cell.css('background-color', colors);
+                // Create a div for each employee with name and color box
+                const contentDiv = $('<div>').addClass('color-square-container').css('width', '30px').css('display', 'flex');
+                employees.forEach(emp => {
+                    const colorBox = $('<div>').addClass('color-square').css('background-color', emp.identifier_color);
+                    const employeeDiv = $('<div>').append(colorBox);
+                    contentDiv.append(employeeDiv);
+                });
+
+                // Set the content and background color of the cell
+                cell.html(contentDiv);
+                cell.css('background-color', 'white'); // Set a default background color
             } else {
                 cell.html('-');
                 cell.css('background-color', 'white'); // Set a default background color
