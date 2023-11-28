@@ -47,3 +47,33 @@ function fillTableWithNamesAndColors(data, tableId) {
 
     });
 }
+
+function fillFullSchedule(data) {
+    const daysOfWeek = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
+
+    // Iterate over each day of the week
+    daysOfWeek.forEach((day) => {
+        // Iterate over each time range
+        for (let i = 7; i <= 16; i++) {
+            const timeRange = `${i}-${i + 1}`;
+            const cellId = `${day.substring(0, 2)}${i}-${i + 1}`;
+
+            // Find the employees scheduled for this time and day
+            const employees = data.filter(emp => emp.schedule[day]?.includes(timeRange));
+
+            // Update the table cell with the employees' names and colors
+            const cell = $(`#${cellId}`);
+            if (employees.length > 0) {
+                // Concatenate names and colors if there are multiple employees
+                const names = employees.map(emp => `${emp.first_name} ${emp.last_name}`).join('<br>');
+                const colors = employees.map(emp => emp.identifier_color).join(';');
+                console.log(colors)
+                cell.html(names);
+                cell.css('background-color', colors);
+            } else {
+                cell.html('-');
+                cell.css('background-color', 'white'); // Set a default background color
+            }
+        }
+    });
+}
