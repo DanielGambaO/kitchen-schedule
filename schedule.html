@@ -14,8 +14,8 @@
 
 <body>
 
+    <div id="navbar-placeholder"></div>
     <table>
-        <div id="navbar-placeholder"></div>
         <caption id="caption"></caption>
         <thead>
             <tr>
@@ -117,12 +117,12 @@
     <script>
         // Accessing parameters from the URL
         const urlParams = new URLSearchParams(window.location.search);
-        const param1 = urlParams.get('param1');
+        const section = urlParams.get('section');
         const param2 = urlParams.get('param2');
 
         // Set text content of the caption element
         const paramCaption = document.getElementById('caption');
-        caption.textContent = `Parameters: ${param1}, ${param2}`;
+        caption.textContent = `Parameters: ${section}, ${param2}`;
 
         $(document).ready(function () {
             // Use the readJsonData function
@@ -130,8 +130,8 @@
                 // Use the fillTableWithData function
                 const tableId = $('#employeeTableBody');
                 // TODO CHANGE PARAMETER FOR URL PARAMETER
-                fillTableWithNamesAndColors(data, tableId, "server");
-                fillFullSchedule(data, "server");
+                fillTableWithNamesAndColors(data, tableId, section);
+                fillFullSchedule(data, section);
             });
         });
         $(document).ready(function () {

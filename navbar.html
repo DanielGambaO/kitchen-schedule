@@ -1,78 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Schedule blueprint</title>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- Include your scripts.js file -->
-    <script src="scripts.js"></script>
-  </head>
 
-  <body>
-    <div class="navbar">
-      <a href="index.html">Home</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schedule blueprint</title>
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Include your scripts.js file -->
+  <script src="scripts.js"></script>
+</head>
 
-      <div class="dropdown">
-        <div class="dropbtn">Cooking</div>
+<body>
+  <div class="navbar">
+    <a href="index.html">Home</a>
 
-        <div class="dropdown-one">
-          <a id="link" class="dItem" href="schedule.html?param1=test2"
-            >Cooking schedule</a
-          >
-          <div id="link1" class="dItem" href="#">
-            Employee list
+    <div class="dropdown">
+      <div class="dropbtn">Cooking</div>
 
-            <div class="dropdown-two">
-              <div class="dItem" id="file" href="#">emp1</div>
-              <div class="dItem" id="file" href="#">emp2</div>
-              <div class="dItem" id="file" href="#">emp3</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="dropdown-one">
+        <a id="link" class="dItem" href="schedule.html?section=cook">Cooking schedule</a>
+        <div id="link1" class="dItem" href="#">
+          Employee list
 
-      <div class="dropdown">
-        <div class="dropbtn">Serving</div>
-
-        <div class="dropdown-one">
-          <a class="dItem" href="schedule.html?param1=test2"
-            >Serving schedule</a
-          >
-          <div id="link1" class="dItem" href="#">
-            Employee list
-
-            <div class="dropdown-two">
-              <div class="dItem" id="file" href="#">emp1</div>
-              <div class="dItem" id="file" href="#">emp2</div>
-              <div class="dItem" id="file" href="#">emp3</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <div class="dropbtn">Cashier</div>
-
-        <div class="dropdown-one">
-          <a class="dItem" href="schedule.html?param1=test2"
-            >Cashier schedule</a
-          >
-          <div id="link1" class="dItem" href="#">
-            Employee list
-
-            <div class="dropdown-two">
-              <div class="dItem" id="file" href="#">emp1</div>
-              <div class="dItem" id="file" href="#">emp2</div>
-              <div class="dItem" id="file" href="#">emp3</div>
-            </div>
+          <div class="dropdown-two">
+            <div class="dItem" id="file" href="#">emp1</div>
+            <div class="dItem" id="file" href="#">emp2</div>
+            <div class="dItem" id="file" href="#">emp3</div>
           </div>
         </div>
       </div>
     </div>
-    <br /><br />
-    <link rel="stylesheet" href="styles.css" />
-  </body>
+
+    <div class="dropdown">
+      <div class="dropbtn">Serving</div>
+
+      <div class="dropdown-one">
+        <a class="dItem" href="schedule.html?section=server">Serving schedule</a>
+        <div id="link1" class="dItem" href="#">
+          Employee list
+
+          <div class="dropdown-two">
+            <div class="dItem" id="file" href="#">emp1</div>
+            <div class="dItem" id="file" href="#">emp2</div>
+            <div class="dItem" id="file" href="#">emp3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <div class="dropbtn">Cashier</div>
+
+      <div class="dropdown-one">
+        <a class="dItem" href="schedule.html?section=cashier">Cashier schedule</a>
+        <div id="link1" class="dItem" href="#">
+          Employee list
+
+          <div class="dropdown-two">
+            <div class="dItem" id="file" href="#">emp1</div>
+            <div class="dItem" id="file" href="#">emp2</div>
+            <div class="dItem" id="file" href="#">emp3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+  <link rel="stylesheet" href="styles.css" />
+</body>
+
 </html>
