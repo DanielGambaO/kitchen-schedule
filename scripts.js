@@ -86,3 +86,40 @@ function fillFullSchedule(data, filterSection) {
         }
     });
 }
+
+function fillDropDowns(data, dropdownsList) {
+
+    // Iterar sobre cada empleado en la data
+    data.forEach(function (employee) {
+        // Obtener la sección del empleado
+        var section = employee.section;
+
+        // Encontrar el índice del dropdown correspondiente en dropdownsList
+        var dropdownIndex = -1;
+        if (section === 'cook') {
+            dropdownIndex = 0;
+        } else if (section === 'server') {
+            dropdownIndex = 1;
+        } else if (section === 'cashier') {
+            dropdownIndex = 2;
+        }
+
+        // Verificar si se encontró un índice válido
+        if (dropdownIndex !== -1) {
+            // Obtener el dropdown correspondiente
+            var dropdown = dropdownsList[dropdownIndex];
+
+            // Crear un nuevo elemento div para el empleado
+            var employeeDiv = $('<a>', {
+                class: 'dItem',
+                id: 'file',
+                href: 'schedule.html?section=' + section + '&name=' + employee.first_name + ' ' + employee.last_name,
+                text: employee.first_name + ' ' + employee.last_name
+            });
+
+            // Agregar el nuevo elemento al dropdown
+            dropdown.append(employeeDiv);
+        }
+    });
+
+}

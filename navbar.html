@@ -24,10 +24,7 @@
         <div id="link1" class="dItem" href="#">
           Employee list
 
-          <div class="dropdown-two">
-            <div class="dItem" id="file" href="#">emp1</div>
-            <div class="dItem" id="file" href="#">emp2</div>
-            <div class="dItem" id="file" href="#">emp3</div>
+          <div class="dropdown-two" id="cook-dropdwon">
           </div>
         </div>
       </div>
@@ -41,10 +38,7 @@
         <div id="link1" class="dItem" href="#">
           Employee list
 
-          <div class="dropdown-two">
-            <div class="dItem" id="file" href="#">emp1</div>
-            <div class="dItem" id="file" href="#">emp2</div>
-            <div class="dItem" id="file" href="#">emp3</div>
+          <div class="dropdown-two" id="server-dropdwon">
           </div>
         </div>
       </div>
@@ -58,17 +52,27 @@
         <div id="link1" class="dItem" href="#">
           Employee list
 
-          <div class="dropdown-two">
-            <div class="dItem" id="file" href="#">emp1</div>
-            <div class="dItem" id="file" href="#">emp2</div>
-            <div class="dItem" id="file" href="#">emp3</div>
+          <div class="dropdown-two" id="cashier-dropdwon">
           </div>
         </div>
       </div>
     </div>
   </div>
   <br /><br />
-  <link rel="stylesheet" href="styles.css" />
+  <script>
+    $(document).ready(function () {
+      // Use the readJsonData function
+      readJsonData(function (data) {
+        // Use the fillTableWithData function
+        const dropdownsList = [$('#cook-dropdwon'), $('#server-dropdwon'), $('#cashier-dropdwon')];
+        const dropdownsIdCooking = $('#cooking-dropdwon');
+        const dropdownIdServer = $('#serving-dropdwon');
+        const dropdownIdCashier = $('#cashier-dropdwon');
+
+        fillDropDowns(data, dropdownsList);
+      });
+    });
+  </script>
 </body>
 
 </html>
