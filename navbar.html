@@ -65,10 +65,6 @@
       readJsonData(function (data) {
         // Use the fillTableWithData function
         const dropdownsList = [$('#cook-dropdwon'), $('#server-dropdwon'), $('#cashier-dropdwon')];
-        const dropdownsIdCooking = $('#cooking-dropdwon');
-        const dropdownIdServer = $('#serving-dropdwon');
-        const dropdownIdCashier = $('#cashier-dropdwon');
-
         fillDropDowns(data, dropdownsList);
       });
     });
