@@ -7,6 +7,12 @@
   margin-top: 20px;
 }
 
+.phone {
+  bottom: 20px;
+  text-align: center;
+  position: fixed;
+}
+
 .navbar {
   position: fixed; /* Change from sticky to fixed */
   top: 0;
