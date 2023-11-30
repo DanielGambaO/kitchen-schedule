@@ -104,7 +104,7 @@
     </table>
 
     <table>
-        <caption id="caption"></caption>
+        <caption></caption>
         <thead>
             <tr>
                 <th>Employee's name</th>
@@ -119,16 +119,16 @@
 
     <select id="days">
         <option selected disabled hidden>Select day</option>
-        <option value="monday">Monday</option>    
-        <option value="tuesday">Tuesday</option>    
-        <option value="wednesday">Wednesday</option>    
-        <option value="thursday">Thursday</option>    
-        <option value="friday">Friday</option>    
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
     </select>
 
     <label for="add_hours">Available hours:</label>
     <select id="add_hours"></select>
-    
+
     <label for="delete_hours">Current hours:</label>
     <select id="delete_hours"></select>
     <br><br>
@@ -139,18 +139,20 @@
         // Accessing parameters from the URL
         const urlParams = new URLSearchParams(window.location.search);
         const section = urlParams.get('section');
-        const param2 = urlParams.get('param2');
+        const fullName = urlParams.get('fullName');
 
         // Set text content of the caption element
         const paramCaption = document.getElementById('caption');
-        caption.textContent = `Parameters: ${section}, ${param2}`;
+        message = "Schedule for " + section + " section";
+        paramCaption.textContent = fullName ? message + ". Employee: " + fullName : message;
 
+
+        const selectName = $('#emp_names');
         $(document).ready(function () {
             // Use the readJsonData function
             readJsonData(function (data) {
                 // Use the fillTableWithData function
                 const tableId = $('#employeeTableBody');
-                // TODO CHANGE PARAMETER FOR URL PARAMETER
                 fillTableWithNamesAndColors(data, tableId, section);
                 fillFullSchedule(data, section);
             });
@@ -161,9 +163,32 @@
 
         $(document).ready(function () {
             readJsonData(function (data) {
-                fillSelectWithNames(data, $('#emp_names'), "server");
+                fillSelectWithNames(data, selectName, section);
             })
         });
+
+        $('#emp_names').change(function () {
+            const selectedName = $(this).val();
+            const selectedDay = $('#days').val();
+            const selectAvailableHours = $('#add_hours');
+            const selectCurrentHours = $('#delete_hours');
+            if (selectedDay) {
+                readJsonData(function (data) {
+                    fillHoursSelects(data, selectAvailableHours, selectCurrentHours, selectedName, selectedDay);
+                });
+            }
+        });
+
+        $('#days').change(function () {
+            const selectedName = selectName.val();
+            const selectedDay = $(this).val();
+            const selectAvailableHours = $('#add_hours');
+            const selectCurrentHours = $('#delete_hours');
+            readJsonData(function (data) {
+                fillHoursSelects(data, selectAvailableHours, selectCurrentHours, selectedName, selectedDay);
+            });
+        });
+
     </script>
 </body>
 
