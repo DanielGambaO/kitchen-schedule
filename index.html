@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kitchen Schedule</title>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kitchen Schedule</title>
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+    </head>
   <style>
     body {
   background-image: url("background.jpg");
@@ -20,63 +24,26 @@
   align-items: center;
 }
   </style>
+</head>
 
-  <body>
-    <div class="navbar">
-      <a href="index.html">Home</a>
+<body>
+  <div id="navbar-placeholder"></div>
 
-      <div class="dropdown">
-        <div class="dropbtn">Cooking</div>
+  <br /><br />
 
-        <div class="dropdown-one">
-          <a id="link" class="dItem" href="schedule.html?param1=test2"
-            >Cooking schedule</a
-          >
-          <div id="link1" class="dItem" href="#">
-            Employee list
-            <div class="dropdown-two">
-              <div class="dItem" id="file" href="#">emp1</div>
-              <div class="dItem" id="file" href="#">emp2</div>
-              <div class="dItem" id="file" href="#">emp3</div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <h3>Welcome</h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+    velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+    est laborum.
+  </p>
+</body>
 
-      <div class="dropdown">
-        <div class="dropbtn">Serving</div>
-        <div class="dropdown-one">
-          <a class="dItem" href="schedule.html?param1=test2"
-            >Serving schedule</a
-          >
-          <div id="link1" class="dItem" href="#">
-            Employee list
-            <div class="dropdown-two">
-              <div class="dItem" id="file" href="#">emp1</div>
-              <div class="dItem" id="file" href="#">emp2</div>
-              <div class="dItem" id="file" href="#">emp3</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dropdown">
-        <div class="dropbtn">Cashier</div>
-        <div class="dropdown-one">
-          <a class="dItem" href="schedule.html?param1=test2"
-            >Cashier schedule</a
-          >
-          <div id="link1" class="dItem" href="#">
-            Employee list
-            <div class="dropdown-two">
-              <div class="dItem" id="file" href="#">emp1</div>
-              <div class="dItem" id="file" href="#">emp2</div>
-              <div class="dItem" id="file" href="#">emp3</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<<<<<
     <br /><br />
     <div class="container">
       <h3>Welcome to the Gurrupleta's family</h3>
@@ -92,4 +59,13 @@
     </div>
     <p>Toll free: </p>
   </body>
+
+
+<script>
+  $(document).ready(function () {
+    $('#navbar-placeholder').load('navbar.html');
+  });
+</script>
+
 </html>
+
