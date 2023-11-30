@@ -1,6 +1,18 @@
+.container {
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
 .navbar {
-  position: sticky;
-  height: 46px;
+  position: fixed; /* Change from sticky to fixed */
+  top: 0;
+  margin: 10px 10px;
+  width: 98%;
+  height: 60px;
   background-color: #1b1b1b;
 }
 
@@ -9,7 +21,7 @@
   font-size: 16px;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 20px;
   text-decoration: none;
 }
 
@@ -23,7 +35,7 @@
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 20px 20px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -109,3 +121,4 @@ select{
   margin: 10px;
   padding: 10px;
 }
+
