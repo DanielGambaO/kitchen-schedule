@@ -111,30 +111,29 @@
       </thead>
       <tbody class="employeeTableBody" id="employeeTableBody"></tbody>
     </table>
-    <br /><br />
-<div id="selection-section">
+
+  <div id="selection-section">
     <label for="emp_names">Update employee hours:</label>
     <select id="emp_names"></select>
 
-    <select id="days">
-      <option selected disabled hidden>Select day</option>
-      <option value="monday">Monday</option>
-      <option value="tuesday">Tuesday</option>
-      <option value="wednesday">Wednesday</option>
-      <option value="thursday">Thursday</option>
-      <option value="friday">Friday</option>
-    </select>
+      <select id="days">
+        <option selected disabled hidden>Select day</option>
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
+      </select>
 
-    <label for="add_hours">Available hours:</label>
-    <select id="add_hours"></select>
+      <label for="add_hours">Available hours:</label>
+      <select id="add_hours"></select>
 
-    <label for="delete_hours">Current hours:</label>
-    <select id="delete_hours"></select>
-    <br /><br />
+      <label for="delete_hours">Current hours:</label>
+      <select id="delete_hours"></select>
+      <br /><br />
 
-    <button>Update</button>
-</div>
-    
+      <button id="submitButton">Update</button>
+    </div>
 
     <script>
       // Accessing parameters from the URL
@@ -156,8 +155,11 @@
           // Use the fillTableWithData function
           const tableId = $("#employeeTableBody");
           if (fullName) {
-            data = data.filter((employee) => employee.first_name + " " + employee.last_name === fullName);
-            console.log(data)
+            data = data.filter(
+              (employee) =>
+                employee.first_name + " " + employee.last_name === fullName
+            );
+            console.log(data);
             var secondTable = document.getElementById("convention-table");
             var selectionSection = document.getElementById("selection-section");
             secondTable.classList.add("hidden");
@@ -166,6 +168,15 @@
           fillTableWithNamesAndColors(data, tableId, section);
           fillFullSchedule(data, section);
           fillSelectWithNames(data, selectName, section);
+
+          $("#submitButton").click(function () {
+            const selectedName = $("#emp_names").val();
+            const selectedDay = $("#days").val();
+            const newHours = $("#add_hours").val(); // Assuming this is where you get the new hours
+
+            // Call the submit function with the appropriate parameters
+            submit(data, selectedName, selectedDay, newHours);
+          });
         });
         $("#navbar-placeholder").load("navbar.html");
       });

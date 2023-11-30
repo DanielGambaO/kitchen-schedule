@@ -198,3 +198,19 @@ function fillHoursSelects(data, selectAvailableId, selectCurrentId, selectedName
     }
 }
 
+function submit(data, selectedEmployeeName, selectedDay, newHours) {
+    const employeeIndex = data.findIndex((employee) => `${employee.first_name} ${employee.last_name}` === selectedEmployeeName);
+
+    if (employeeIndex !== -1) {
+
+        data[employeeIndex].schedule[selectedDay] = data[employeeIndex].schedule[selectedDay] + newHours;
+
+        // Save the updated data to localStorage
+        localStorage.setItem('scheduleData', JSON.stringify(data));
+
+        // Update the displayed schedule on the page
+        fillFullSchedule(data, data[employeeIndex].section);
+    } else {
+        console.error("Selected employee not found in the data.");
+    }
+}
