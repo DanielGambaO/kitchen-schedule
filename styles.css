@@ -5,18 +5,21 @@
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   margin-top: 20px;
+  flex: 1; /* Allow the container to take the available space */
 }
 
 .phone {
   bottom: 20px;
   text-align: center;
   position: fixed;
+  left: 662px; /* Adjust the left position as needed */
 }
 
 .navbar {
   position: fixed; /* Change from sticky to fixed */
   top: 0;
-  margin: 10px 10px;
+  left: 0;
+  margin: 10px 10px 10px 15px;
   width: 98%;
   height: 60px;
   background-color: #1b1b1b;
@@ -99,16 +102,32 @@
 }
 
 /* Employee table body styles */
-.employeeTableBody {
-  text-align: center;
+.convention-table {
+  margin-left: 0;
+  width: 50%;
 }
 
 /* General table styles */
 table {
-  width: 100%;
+  width: 90%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-left: 80px;
 }
+
+#convention-table {
+  width: 50%;
+  float: right; /* Add float left to move it to the left */
+  margin-right: 65px; /* Remove the auto margin to the center */
+}
+
+
+#selection-section {
+  text-align: left;
+  max-width: 200px;
+  margin: 0 auto; /* Center the selection section */
+}
+
 
 th,
 td {
@@ -131,3 +150,36 @@ select{
 .hidden {
   display: none;
 }
+#selection-section {
+  text-align: center;
+  max-width: 200px;
+  margin-left: 200px; /* Center the container */
+}
+label { 
+  margin-right: 10px;
+}
+
+.selection-section-emp_names {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+#selection-section select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+}
+
+#selection-section button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#selection-section button:hover {
+  background-color: #45a049;
+}
+
