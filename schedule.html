@@ -153,9 +153,13 @@
             readJsonData(function (data) {
                 // Use the fillTableWithData function
                 const tableId = $('#employeeTableBody');
+                if(fullName) {
+                    data = data.filter((employee) => employee.first_name + ' ' + employee.last_name === fullName);
+                }
                 fillTableWithNamesAndColors(data, tableId, section);
                 fillFullSchedule(data, section);
-            });
+                
+                });
         });
         $(document).ready(function () {
             $('#navbar-placeholder').load('navbar.html');
